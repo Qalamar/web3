@@ -17,6 +17,7 @@ import {
   usePrepareSendTransaction,
   useSendTransaction,
 } from 'wagmi'
+import Head from 'next/head'
 
 const App = () => {
   const [open, setOpen] = useState<boolean>(true)
@@ -58,6 +59,10 @@ const App = () => {
 
   return (
     <div tw="bg-gray-100">
+      <Head>
+        <title>Biconomy Test</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       {isConnected ? (
         <>
           <UI.Header />
