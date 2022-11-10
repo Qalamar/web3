@@ -50,5 +50,9 @@ export const ResultContainer = styled.div`
 `
 
 export const Result = styled.div`
-  ${tw`flex items-center justify-center text-5xl font-bold tracking-tight text-gray-900`}
+  ${tw`flex items-center justify-center text-2xl font-bold tracking-tight text-gray-900`}
+`
+
+export const WalletDetails = styled.div`
+  ${tw`mt-2 text-xs font-semibold text-center`}
 `
