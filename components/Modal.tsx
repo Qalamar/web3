@@ -1,18 +1,15 @@
 import tw from 'twin.macro'
-import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/24/outline'
-import {
-  ArrowLeftCircleIcon,
-  ArrowRightOnRectangleIcon,
-} from '@heroicons/react/20/solid'
+import { ArrowRightOnRectangleIcon } from '@heroicons/react/20/solid'
 import { InjectedConnector } from '@wagmi/core'
+import { Dispatch, Fragment, SetStateAction } from 'react'
 import { useConnect } from 'wagmi'
 
 interface ModalProps {
   open: boolean
-  setOpen: any
+  setOpen: Dispatch<SetStateAction<boolean>>
 }
+
 const Modal = ({ open, setOpen }: ModalProps) => {
   const { connect } = useConnect({
     connector: new InjectedConnector(),

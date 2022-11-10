@@ -35,13 +35,9 @@ const App = () => {
   const { config } = usePrepareSendTransaction({
     request: { to: address!, value: BigNumber.from('10000000000000000') },
   })
-  const {
-    data: transaction,
-    isLoading: isTransactionLoading,
-    isSuccess: isTransactionSuccess,
-    sendTransaction,
-  } = useSendTransaction(config)
+  const { sendTransaction } = useSendTransaction(config)
 
+  // Event handlers
   const handleDisconnect = () => {
     disconnect()
   }
